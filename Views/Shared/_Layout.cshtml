@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - KEA Students</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/cbsStudents.styles.css" asp-append-version="true" />
+</head>
+
+<body>
+    <div class="row">
+        <div class="col-2">
+            <div id="mySidenav" class="sidenav p-2">
+                <ul class="nav-imte ">
+                    <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Kea<br>Students</a>
+                </ul>
+                <ul class="nav-item">
+                    <a class="sideNavArticle" asp-area="" asp-controller="Posts" asp-action="Index">Posts</a>
+                </ul>
+                <ul class="nav-item">
+                    <a class="sideNavArticle" asp-area="" asp-controller="Events" asp-action="Index">Events</a>
+                </ul>
+                <ul class="nav-item">
+                    <a class="sideNavArticle" asp-area="" asp-controller="Comments" asp-action="Index">Comments</a>
+                </ul>
+            </div>
+        </div>
+        <div class="col-9">
+            <main role="main" class="pb-3">
+                @RenderBody()
+            </main>
+        </div>
+
+    </div>
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2022 - Kea Students - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+
+</html>
